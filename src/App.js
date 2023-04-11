@@ -1,25 +1,39 @@
-import logo from './logo.svg';
 import './App.css';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import ExpensesOverview from './Expenses/Expenses-Overview';
+import Problems from './fepoc/Problems/problems';
+import MainRouting from './Main-Routing';
+import Home from './Home';
+import NoPageFound from './No-page-Found';
+import ProductDetails from './fepoc/Problems/product-details';
+import Outcomes, { getAllUsers } from './fepoc/outcomes/Outcomes';
 
-function App() {
+const routes = createBrowserRouter([
+  {
+    path: '/', element: <MainRouting />, errorElement: <NoPageFound />,
+    children:
+      [
+        { path: '/', element: <Home /> },
+        { path: '/expenses', element: <ExpensesOverview /> },
+        {
+          path: '/problems', element: <Problems />, children: [
+            { path: ':problemId', element: <ProductDetails /> }
+          ]
+        },
+        { path: '/outcomes', element: <Outcomes />, loader: getAllUsers }
+      ]
+  },
+
+]);
+
+const App = () => {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <RouterProvider router={routes}/>
     </div>
   );
+
 }
 
 export default App;
