@@ -40,7 +40,7 @@ const ToursOverview = () => {
     <div>
       <main>
         <div className='title'>
-          <h2>our reviews</h2>
+          <h2>Our Tours</h2>
           <div className='underline'></div>
           {deriveLoading()}
           {tours.length < 1 && !loading && noToursLeft()}

@@ -11,6 +11,7 @@ import ReferralsOerview from './fepoc/Referrals/referrals-oerview';
 import LoginContext from './context/login-context'
 import Login from './Login';
 import ToursOverview from './tours/tours-overview';
+import ReviewsOverview from './reviews/Reviews-Overview';
 
 const routes = createBrowserRouter([
   {
@@ -28,7 +29,8 @@ const routes = createBrowserRouter([
         },
         { path: '/outcomes', element: <Outcomes />, loader: getAllUsers },
         { path: '/referrals', element: <ReferralsOerview /> },
-        { path: '/tours', element: <ToursOverview /> }
+        { path: '/tours', element: <ToursOverview /> },
+        { path: '/reviews', element: <ReviewsOverview /> }
         
       ]
   },
