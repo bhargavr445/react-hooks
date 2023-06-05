@@ -1,3 +1,5 @@
+# rafce - create component
+
 # we could always render jsx from java-script - like how i handeled if condition in 
 /Users/bhargavrg/react-apps/turotial/src/App.js - line 23
 
@@ -7,12 +9,15 @@
 # useEffect (make sure not to use strict mode when working with this, it will render useEffect twice always)
     1. can we used as a constructor and onInit etc etc, but its dependencies(state props) needs to be configured accordingly
 
+# contextAPI is equalent to behaviour subject 
+
 
 
 # Routing
 Link
 NavLink
 errorElement
+index route 
 useNavigate() hook => Programatically navigating..
 useParams() - to get all the parrams from URL(i.e id's from dynamic ids etc..)
 
@@ -21,3 +26,4 @@ loaders() - same as route resolver
 useLoaderData() is used to get the data that loader() returns
 json()
 
+# npm install redux react-redux
