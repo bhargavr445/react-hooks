@@ -36,3 +36,43 @@
     transform: rotate(360deg);
   }
 }
+
+.line-cls {
+  display: inline-block;
+
+  & ul {
+    margin: 10px;
+    background-color: rgb(0, 83, 128);
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+  }
+}
+
+.fim-btn {
+  margin: 10px;
+  padding: 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  box-shadow: none;
+  text-shadow: none;
+  border: none;
+  line-height: 1.5;
+}
+
+.primary-btn {
+  background-color: rgb(0, 83, 128);
+  color: white;
+  &:disabled {
+    background-color: green;
+    cursor:unset;
+    border: none;
+  }
+}
+
+.secondary-btn {
+  color: white;
+  background-color: #007bff;;
+}

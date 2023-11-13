@@ -10,6 +10,7 @@ const ReviewsOverview = () => {
     const onNextHandler = () => {
         if (index + 1 < people.length) {
             setIndex(index + 1);
+
         }
     }
 
@@ -25,8 +26,21 @@ const ReviewsOverview = () => {
     }
 
     useEffect(() => {
-        selectedPerson = people[index];
+        if(index) {
+            selectedPerson = people[index];
+            console.log('not constructor');
+        }
+        
     }, [index]);
+
+    useEffect(
+        ()=> {
+
+            console.log('now i am constructor...')
+        }, 
+        []
+        )
+
 
     return (
         <div>

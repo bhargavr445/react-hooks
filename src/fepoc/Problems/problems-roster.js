@@ -23,10 +23,10 @@ const ProblemsRoster = ({rosterData, onDeleteRecord}) => {
     
     const rowClick = (item) => {
         console.log(item);
-        navigate(`/problems/${item.id}`);
+        navigate(`/problems/problemsDetails`);
     }
     return (
-        <div>
+        <div className="main">
             <Outlet />
             <table>
                 <thead>
@@ -37,6 +37,7 @@ const ProblemsRoster = ({rosterData, onDeleteRecord}) => {
                         <th>Phone</th>
                         <th>UserName</th>
                         <th>Website</th>
+                        <th>Actions</th>
                     </tr>
 
                 </thead>

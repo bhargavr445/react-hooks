@@ -1,5 +1,5 @@
 import React from 'react'
-import { FaQuoteRight, FaChevronLeft, FaChevronRight } from 'react-icons/fa';
+import { FaTwitterSquare, FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 
 const Review = (props) => {
     return (
@@ -7,7 +7,7 @@ const Review = (props) => {
             <div className='img-container'>
                 <img src={props.selectedPerson?.image} alt={props.selectedPerson?.name} className='person-img' />
                 <span className='quote-icon'>
-                    <FaQuoteRight />
+                    <FaTwitterSquare />
                 </span>
             </div>
             <h4 className='author'>{props.selectedPerson?.name}</h4>

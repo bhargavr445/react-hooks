@@ -8,12 +8,12 @@ const ProductDetails = () => {
     //     return state.problemsState
     // });
 
-    const params = useParams();
+    // const params = useParams();
     return (
         <div>
             Product Details..
             {/* {selector.moduleName} */}
-            {params.problemId}
+            {/* {params.problemId} */}
         </div>
     );
 }
